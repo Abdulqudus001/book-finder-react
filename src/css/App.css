@@ -1,5 +1,5 @@
 .App {
-  padding: 50px 20px;
+  padding: 50px 10px;
 }
 
 div.search {
@@ -9,6 +9,7 @@ div.search {
 }
 
 div.search input[type='text'] {
+  flex: 0 0 75%;
   padding: 10px 0;
   outline: none;
   border-radius: 6px 0 0 6px;
@@ -37,4 +38,17 @@ div.books {
   margin: 50px 0;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
+
+@media (min-width: 600px) {
+  div.search {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

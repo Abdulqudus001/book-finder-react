@@ -31,12 +31,7 @@ class App extends Component {
           <button>Search</button>
         </div>
         <div className="books">
-          <Book />
-          <Book />
-          <Book />
-          <Book />
-          <Book />
-          <Book />
+          <Book name="Abdulqudus" author="Abubakre" published="me" />
         </div>
       </div>
     );
