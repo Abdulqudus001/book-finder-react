@@ -2,7 +2,7 @@ div.book {
   width: 100%;
   height: 30vh;
   flex: 0 0 100%;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   margin: 50px 0;
@@ -11,7 +11,7 @@ div.book {
 div.book-image {
   width: 45%;
   height: 110%;
-  background: #FFF;
+  background: #fff;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
   top: -20%;
   left: 5%;
@@ -44,13 +44,13 @@ p.pub-by {
 
 div.about a {
   text-decoration: none;
-  background: #15D088;
+  background: #15d088;
   border-radius: 6px;
   padding: 10px 20px;
   position: absolute;
   outline: none;
   border: none;
-  color: #FFF;
+  color: #fff;
   bottom: 10%;
 }
 
@@ -69,8 +69,21 @@ div.about a {
   }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  div.book {
+    height: 40vh;
+    flex: 0 0 70%;
+  }
+}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  div.book {
+    flex: 0 0 47%;
+  }
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  div.book {
+    flex: 0 0 47%;
+  }
+}

@@ -32,6 +32,7 @@ class App extends Component {
         </div>
         <div className="books">
           <Book name="Abdulqudus" author="Abubakre" published="me" />
+          <Book name="Abdulqudus" author="Abubakre" published="me" />
         </div>
       </div>
     );
