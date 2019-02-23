@@ -18,6 +18,10 @@ div.book-image {
   position: absolute;
 }
 
+div.book-image img {
+  width: 100%;
+}
+
 div.about {
   margin-left: 52.5%;
   width: 45%;
