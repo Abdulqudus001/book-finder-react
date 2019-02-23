@@ -1,15 +1,15 @@
 .App {
-  padding: 50px
+  padding: 50px 20px;
 }
 
 div.search {
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 div.search input[type='text'] {
-  padding: 10px 20px;
+  padding: 10px 0;
   outline: none;
   border-radius: 6px 0 0 6px;
   border: none;
@@ -21,6 +21,7 @@ div.search input::placeholder {
   color: #899591;
   opacity: 0.5;
   font-size: 13px;
+  padding: 0 20px;
 }
 
 div.search button {
@@ -29,4 +30,11 @@ div.search button {
   color: #FFF;
   border: none;
   outline: none;
+  padding: 1px 20px;
+}
+
+div.books {
+  margin: 50px 0;
+  display: flex;
+  flex-flow: row wrap;
 }

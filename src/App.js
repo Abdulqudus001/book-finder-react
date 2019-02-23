@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       searchValue: ""
     };
-
+    let array = [1, 2, 3, 4, 5, 6];
     this.handleSearchChange = this.handleSearchChange.bind(this);
   }
 
@@ -30,7 +30,14 @@ class App extends Component {
           />
           <button>Search</button>
         </div>
-        <Book />
+        <div className="books">
+          <Book />
+          <Book />
+          <Book />
+          <Book />
+          <Book />
+          <Book />
+        </div>
       </div>
     );
   }
