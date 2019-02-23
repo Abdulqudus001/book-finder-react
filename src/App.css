@@ -1,5 +1,8 @@
+.App {
+  padding: 50px
+}
+
 div.search {
-  width: 80vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -8,6 +11,22 @@ div.search {
 div.search input[type='text'] {
   padding: 10px 20px;
   outline: none;
-  border-radius: 10px;
+  border-radius: 6px 0 0 6px;
   border: none;
+  color: #899591;
+  font-size: 15px;
+}
+
+div.search input::placeholder {
+  color: #899591;
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+div.search button {
+  border-radius: 0 6px 6px 0;
+  background: #15D088;
+  color: #FFF;
+  border: none;
+  outline: none;
 }
