@@ -9,7 +9,32 @@ class App extends Component {
     super(props);
     this.state = {
       searchValue: "",
-      books: []
+      books: [],
+      searchIndex: 0,
+      error: false,
+      hasMore: true,
+      isLoading: false
+    };
+
+    window.onscroll = () => {
+      const {
+        loadUsers,
+        state: { error, isLoading, hasMore }
+      } = this;
+
+      // Bails early if:
+      // * there's an error
+      // * it's already loading
+      // * there's nothing left to load
+      if (error || isLoading || !hasMore) return;
+
+      // Checks that the page has scrolled to the bottom
+      if (
+        window.innerHeight + document.documentElement.scrollTop ===
+        document.documentElement.offsetHeight
+      ) {
+        this.performSearch();
+      }
     };
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.performSearch = this.performSearch.bind(this);
@@ -26,17 +51,17 @@ class App extends Component {
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
           this.state.searchValue
-        )}`
+        )}&startIndex=${this.state.searchIndex}`
       )
       .then(res => {
-        const books = res.data;
-        console.log(books.items);
+        const books = res.data.items;
+        let newIndex = this.state.searchIndex;
+        newIndex += 10;
         this.setState({
-          books: books.items
+          books: [...this.state.books, ...books],
+          searchIndex: newIndex
         });
-        console.log(this.state.books);
       });
-    // fetch('').then(respponse => {return response.json();}).then(data => console.log(data))
   }
   render() {
     return (
