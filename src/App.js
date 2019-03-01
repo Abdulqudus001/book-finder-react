@@ -26,7 +26,7 @@ class App extends Component {
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
           this.state.searchValue
-        )}&key=${api_url}`
+        )}`
       )
       .then(res => {
         const books = res.data;
