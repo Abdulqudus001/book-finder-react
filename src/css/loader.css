@@ -28,6 +28,7 @@
 .lds-roller div:nth-child(1):after {
   top: 50px;
   left: 50px;
+  background: #15D088;
 }
 
 .lds-roller div:nth-child(2) {
@@ -37,6 +38,7 @@
 .lds-roller div:nth-child(2):after {
   top: 54px;
   left: 45px;
+  background: #15D088;
 }
 
 .lds-roller div:nth-child(3) {
@@ -46,6 +48,7 @@
 .lds-roller div:nth-child(3):after {
   top: 57px;
   left: 39px;
+  background: #fff;
 }
 
 .lds-roller div:nth-child(4) {
@@ -55,6 +58,7 @@
 .lds-roller div:nth-child(4):after {
   top: 58px;
   left: 32px;
+  background: #15D088;
 }
 
 .lds-roller div:nth-child(5) {
@@ -64,6 +68,7 @@
 .lds-roller div:nth-child(5):after {
   top: 57px;
   left: 25px;
+  background: #15D088;
 }
 
 .lds-roller div:nth-child(6) {
@@ -73,6 +78,7 @@
 .lds-roller div:nth-child(6):after {
   top: 54px;
   left: 19px;
+  background: #fff;
 }
 
 .lds-roller div:nth-child(7) {
@@ -82,6 +88,7 @@
 .lds-roller div:nth-child(7):after {
   top: 50px;
   left: 14px;
+  background: #15D088;
 }
 
 .lds-roller div:nth-child(8) {
@@ -91,6 +98,7 @@
 .lds-roller div:nth-child(8):after {
   top: 45px;
   left: 10px;
+  background: #15D088;
 }
 
 @keyframes lds-roller {
