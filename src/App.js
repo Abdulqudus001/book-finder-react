@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Book from "./components/book.js";
 import "./css/App.css";
+import "./css/loader.css";
 import axios from "axios";
 import { api_url } from "./config.js";
 
@@ -91,6 +92,16 @@ class App extends Component {
               />
             );
           })}
+        </div>
+        <div class="lds-roller">
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
         </div>
       </div>
     );
