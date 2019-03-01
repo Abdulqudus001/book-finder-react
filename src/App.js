@@ -12,19 +12,20 @@ class App extends Component {
       books: [],
       searchIndex: 0,
       isLoading: false,
-      hasMore: true
+      hasMore: true,
+      error: false
     };
 
     window.onscroll = () => {
       const {
-        state: { isLoading, hasMore }
+        state: { isLoading, hasMore, error }
       } = this;
 
       // Bails early if:
       // * there's an error
       // * it's already loading
       // * there's nothing left to load
-      if (isLoading || !hasMore) return;
+      if (isLoading || !hasMore || error) return;
 
       // Checks that the page has scrolled to the bottom
       if (
@@ -72,6 +73,11 @@ class App extends Component {
           books: [...this.state.books, ...books],
           searchIndex: newIndex
         });
+      })
+      .catch(err => {
+        this.setState({
+          error: true
+        });
       });
   }
   render() {
@@ -101,11 +107,12 @@ class App extends Component {
                     : ""
                 }
                 published={element.volumeInfo.publisher}
+                to={element.volumeInfo.previewLink}
               />
             );
           })}
         </div>
-        {this.state.isLoading && (
+        {this.state.isLoading && !this.state.error && (
           <div className="loader">
             <div className="lds-roller">
               <div />

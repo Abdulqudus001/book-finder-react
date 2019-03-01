@@ -22,7 +22,6 @@ div.search input::placeholder {
   color: #899591;
   opacity: 0.5;
   font-size: 13px;
-  padding: 0 20px;
 }
 
 div.search button {
@@ -31,7 +30,7 @@ div.search button {
   color: #FFF;
   border: none;
   outline: none;
-  padding: 1px 20px;
+  padding: 5px 20px;
 }
 
 div.books {

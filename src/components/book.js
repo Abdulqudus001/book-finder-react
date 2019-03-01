@@ -7,13 +7,16 @@ export default class book extends Component {
       <div className="book">
         <div className="book-image">
           <img src={this.props.image} alt="" />
-        </div>
+        </div>{" "}
         <div className="about">
-          <p className="name">{this.props.name}</p>
-          <p className="by">By: {this.props.author}</p>
-          <p className="pub-by">Published by: {this.props.published}</p>
-          <a href="#">See this book</a>
-        </div>
+          <p className="name"> {this.props.name} </p>{" "}
+          <p className="by"> By: {this.props.author} </p>{" "}
+          <p className="pub-by"> Published by: {this.props.published} </p>{" "}
+          <a target="_blank" rel="noopener noreferrer" href={this.props.to}>
+            {" "}
+            See this book{" "}
+          </a>{" "}
+        </div>{" "}
       </div>
     );
   }
