@@ -6,10 +6,11 @@ div.book {
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   margin: 50px 0;
+  display: flex;
 }
 
 div.book-image {
-  width: 45%;
+  flex: 0 0 40%;
   background: #fff;
   height: inherit;
   margin: auto;
@@ -17,8 +18,8 @@ div.book-image {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  left: 5%;
-  position: absolute;
+  left: 0;
+  position: relative;
 }
 
 div.book-image img {
@@ -28,8 +29,7 @@ div.book-image img {
 }
 
 div.about {
-  margin-left: 52.5%;
-  width: 45%;
+  /* width: 45%; */
 }
 
 div.about p {
@@ -74,7 +74,6 @@ div.about a {
 
   div.about {
     width: 55%;
-    margin-left: 42.5%;
   }
 }
 

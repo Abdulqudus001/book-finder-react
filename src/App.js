@@ -38,6 +38,7 @@ class App extends Component {
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.performSearch = this.performSearch.bind(this);
     this.checkKey = this.checkKey.bind(this);
+    this.newSearch = this.newSearch.bind(this);
   }
 
   handleSearchChange(event) {
@@ -45,8 +46,18 @@ class App extends Component {
       searchValue: event.target.value
     });
   }
+  newSearch() {
+    this.setState({
+      books: []
+    });
+    this.performSearch();
+  }
   checkKey(e) {
+    // eslint-disable-next-line
     if (e.charCode != 13) return;
+    this.setState({
+      books: []
+    });
     this.performSearch();
   }
   performSearch() {
@@ -92,9 +103,10 @@ class App extends Component {
             onKeyPress={this.checkKey}
             onChange={this.handleSearchChange}
           />{" "}
-          <button onClick={this.performSearch}> Search </button>{" "}
+          <button onClick={this.newSearch}> Search </button>{" "}
         </div>{" "}
         <div className="books">
+          {" "}
           {this.state.books.map((element, index) => {
             return (
               <Book
@@ -110,8 +122,8 @@ class App extends Component {
                 to={element.volumeInfo.previewLink}
               />
             );
-          })}
-        </div>
+          })}{" "}
+        </div>{" "}
         {this.state.isLoading && !this.state.error && (
           <div className="loader">
             <div className="lds-roller">
@@ -123,9 +135,9 @@ class App extends Component {
               <div />
               <div />
               <div />
-            </div>
+            </div>{" "}
           </div>
-        )}
+        )}{" "}
       </div>
     );
   }
